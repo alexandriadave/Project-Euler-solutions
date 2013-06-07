@@ -1,0 +1,13 @@
+public class program1 {
+    public static void main(String args[]){
+        int num=1;
+        int count=0;
+        while(num<1000){
+            if(num%3==0||num%5==0){count+=num;}
+            
+            num++;
+        }
+        System.out.println(count);
+    }
+    
+}
