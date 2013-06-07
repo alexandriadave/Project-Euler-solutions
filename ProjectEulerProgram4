@@ -1,0 +1,30 @@
+public class program4 {
+
+    public static void main(String arhs[]) {
+        int num1 = 999;
+        int num2 = 999;
+        int max = 0;
+
+        for (num1 = 999; num1 >= 100; num1--) {
+            for (num2 = 999; num2 >= 100; num2--) {
+                int prod = num1 * num2;
+                if (prod > max) {
+                    if (isPalin(prod)) {
+                        if (prod > max) {
+                            max = prod;
+                        }
+                    }
+                }
+            }
+        }
+
+        System.out.println(max);
+    }
+
+    static public boolean isPalin(int num) {
+        String s = Integer.toString(num);
+        StringBuilder str = new StringBuilder(s);
+        String srev = str.reverse().toString();
+        return (s.equals(srev));
+    }
+}
