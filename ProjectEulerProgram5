@@ -1,0 +1,14 @@
+public class program5 {
+
+    public static void main(String[] args) {
+        BigInteger lcmofall = BigInteger.ONE;
+        for (int i = 1; i <= 20; i++) {
+            lcmofall = lcm(BigInteger.valueOf(i), lcmofall);
+        }
+        System.out.println(lcmofall);
+    }
+
+    private static BigInteger lcm(BigInteger x, BigInteger y) {
+        return x.divide(x.gcd(y)).multiply(y);
+    }
+}
