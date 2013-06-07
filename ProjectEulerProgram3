@@ -1,0 +1,26 @@
+public class program3 {
+
+    public static void main(String[] args) {
+        long num = 600851475143L;
+        long factor = 2;
+
+        boolean flag = true;
+
+        for (long i = 3; i < Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                for (long j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j == 0) {
+                        flag = false;
+                    }
+                }
+                if (flag) {
+
+                    factor = i;
+
+                }
+            }
+
+        }
+        System.out.println(factor);
+    }
+}
